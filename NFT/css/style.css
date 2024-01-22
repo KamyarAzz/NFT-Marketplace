@@ -1,0 +1,383 @@
+/***** Imports ******/
+
+@import url(fonts.css);
+
+/***** Variables *****/
+
+:root{
+  --background:#2B2B2B;
+  --background-secondary:#3B3B3B;
+  --call-to-sction:#A259FF;
+  --text:#FFFFFF;
+}
+
+/***** CSS Reset *****/
+
+*,*::after,*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/***** Elements *****/
+
+body{
+  background-color: var(--background);
+  font-family: "Work Sans";
+  color: var(--text);
+}
+
+button{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  color: var(--text);
+  padding: 0rem 1.875rem;
+  gap: 0.75rem;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  padding: 1.25rem 3.125rem;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+h1{
+  font-family: "Work Sans";
+  font-size: 4.1875rem;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+h3{
+  font-family: "Work Sans";
+  font-size: 2.375rem;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+h4{
+  font-family: "Space Mono";
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+h5{
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 140%;
+  align-self: stretch;
+}
+
+/***** Layout Classes *****/
+
+.flex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.main-btn{
+  height: 2.875rem;
+  padding: 0rem 1.25rem;
+  gap: 0.75rem;
+  background-color: transparent;
+}
+
+.highlight-btn{
+  background-color: var(--call-to-sction);
+  border-radius: 1.25rem;
+  height: 3.75rem;
+}
+
+.expand-btn{
+  display: flex;
+height: 3.75rem;
+padding: 0rem 3.125rem;
+justify-content: center;
+align-items: center;
+border: 2px solid var(--Call-to-Action, #A259FF);
+border-radius: 1.25rem;
+}
+
+.expand-btn-text{
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 1.4rem */
+}
+
+.capitalize{
+  text-transform: capitalize;
+  font-style: normal;
+}
+
+.text-center{
+  text-align: center;
+}
+
+/***** Styles *****/
+
+.header-logo{
+  gap: 0.625rem;
+}
+
+.hero-section{
+  padding: 5rem 7.19rem;
+  justify-content: center;
+  gap: 1.88rem;
+}
+
+.hero-article{
+  align-items: flex-start;
+  gap: 1.25rem;
+  align-self: stretch;
+  width: 31.875rem;
+}
+
+.hero-header{
+  justify-content: center;
+  flex: 1 0 0;
+}
+
+.hero-text{
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 160%;
+  align-self: stretch;
+}
+
+.hero-btn{
+  padding: 0rem 3.125rem;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.75rem;
+  margin: 1.88rem 0;
+}
+
+.hero-right{
+  justify-self: flex-start;
+}
+
+.hero-details{
+  display: flex;
+  align-items: flex-start;
+  gap: 1.875rem;
+  align-self: stretch;
+}
+
+.hero-details{
+  justify-content: space-between;
+}
+
+.details-text{
+  font-size: 1.49938rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.hero-image{
+  border-radius: 1.25rem 1.25rem 0rem 0rem;
+  object-fit: cover;
+  background-color: var(--background-secondary);
+}
+
+.hero-caption{
+  height: 6.8125rem;
+  padding: 1.25rem;
+  justify-content: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.hero-footer{
+  background-color: var(--background-secondary);
+  height: 6.8125rem;
+  padding: 1.25rem;
+  justify-content: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  align-self: stretch;  
+  border-radius: 0rem 0rem 1.25rem 1.25rem;
+}
+
+.hero-footer-text{
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  align-self: stretch;
+}
+
+.trending-collection{
+  padding: 5rem 0rem;
+  gap: 3.75rem;
+  align-self: stretch;
+  align-items: center !important;
+}
+
+.collection-card-row{
+  width: 65.625rem;
+  align-items: flex-start;
+  gap: 1.875rem;
+}
+
+.collection-card{
+  display: flex;
+  width: 20.625rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9375rem;
+  flex-shrink: 0;
+}
+
+.headline{
+  width: 65.375rem;
+  align-items: flex-start;
+  gap: 0.625rem;
+}
+
+.headline p{
+  font-family: "Work Sans";
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.cards-frame{
+  align-items: flex-start;
+  gap: 0.9375rem;
+  align-self: stretch;
+}
+
+.frame-btn{
+  height: 6.25rem;
+  padding: 2rem 0.9375rem;
+  justify-content: center;
+  align-items: center !important;
+  gap: 0.625rem;
+  flex: 1 0 0;
+  font-family: "Space Mono";
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+.collection-card-footer{
+  gap: 0.625rem;
+  align-self: stretch;
+}
+
+.top-rated-artists{
+  padding: 5rem 12.1875rem;
+  align-items: center !important;
+  gap: 3.75rem;
+  align-self: stretch;
+  justify-content: center;
+}
+
+.artists-header{
+  display: flex;
+  width: 65.625rem;
+  gap: 6.25rem;
+}
+
+.artists-headline{
+  width: 43.9375rem;
+  gap: 0.625rem;
+  flex-shrink: 0;
+}
+
+.artist-container{
+  padding: 1.25rem;
+  align-items: center;
+  gap: 1.25rem;
+  flex: 1 0 0;
+}
+
+.inc-number{
+  display: flex;
+  border-radius: 1.25rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  justify-content: center;
+  align-items: center;
+  align-self: start;
+  background: var(--background-secondary);
+}
+
+.inc-number p{
+  color: var(--caption-label-text, #858584);
+  text-align: center;
+  font-family: "Space Mono";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 140%; 
+}
+
+.artist-text{
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.625rem;
+  align-self: stretch;
+}
+
+.artist-text-1{
+  color:#858584;
+  text-align: right;
+  font-family: "Work Sans";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.artist-text-2{
+  color: var(#FFF);
+  font-family: "Space Mono";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+/* Extra small devices (phones, 576px and down) */
+@media only screen and (max-width: 576px) {
+  
+}
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media only screen and (min-width: 576px) {
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}
