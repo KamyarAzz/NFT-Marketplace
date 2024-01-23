@@ -76,6 +76,16 @@ h5{
   align-self: stretch;
 }
 
+footer{
+  display: flex;
+  padding: 2.5rem 12.1875rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875rem;
+  align-self: stretch;
+  background: var(--Background---Secondary, #3B3B3B);
+}
+
 /***** Layout Classes *****/
 
 .flex{
@@ -105,12 +115,12 @@ h5{
 
 .expand-btn{
   display: flex;
-height: 3.75rem;
-padding: 0rem 3.125rem;
-justify-content: center;
-align-items: center;
-border: 2px solid var(--Call-to-Action, #A259FF);
-border-radius: 1.25rem;
+  height: 3.75rem;
+  padding: 0rem 3.125rem;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--Call-to-Action, #A259FF);
+  border-radius: 1.25rem;
 }
 
 .expand-btn-text{
@@ -119,7 +129,7 @@ border-radius: 1.25rem;
   font-size: 1rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 140%; /* 1.4rem */
+  line-height: 140%;
 }
 
 .capitalize{
@@ -129,6 +139,10 @@ border-radius: 1.25rem;
 
 .text-center{
   text-align: center;
+}
+
+.stretch{
+  align-self: stretch;
 }
 
 /***** Styles *****/
@@ -284,12 +298,19 @@ border-radius: 1.25rem;
   align-self: stretch;
 }
 
-.top-rated-artists{
+.section-content{
   padding: 5rem 12.1875rem;
   align-items: center !important;
   gap: 3.75rem;
   align-self: stretch;
   justify-content: center;
+}
+
+.artists-grid{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3,1fr);
+  gap: 1.875rem;
 }
 
 .artists-header{
@@ -309,18 +330,23 @@ border-radius: 1.25rem;
   align-items: center;
   gap: 1.25rem;
   flex: 1 0 0;
+  background-color: var(--background-secondary);
+  border-radius: 1.25rem;
+  position: relative;
 }
 
 .inc-number{
   display: flex;
+  position: absolute;
+  left: 1.25rem;
+  top: 1.125rem;
   border-radius: 1.25rem;
   width: 1.875rem;
   height: 1.875rem;
   justify-content: center;
   align-items: center;
   align-self: start;
-  background: var(--background-secondary);
-}
+  background: var(--background);}
 
 .inc-number p{
   color: var(--caption-label-text, #858584);
@@ -355,6 +381,317 @@ border-radius: 1.25rem;
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
+}
+
+.categories-grid{
+  gap: 1.88rem;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(2,1fr);
+}
+
+.category-card{
+  border-radius: 1.25rem;
+  background: #3B3B3B;
+  cursor: pointer;
+}
+
+.category-card:hover .category-img-container{
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(0px);
+}
+
+.category-card:hover img{
+  display: none;
+}
+
+.category-top{
+  height: 15rem;
+  align-self: stretch;
+  border-radius: 1.25rem 1.25rem 0rem 0rem;
+  display: flex;
+  width: 15rem;
+  height: 15rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+}
+
+.category-img-container{
+  display: flex;
+  width: 15rem;
+  height: 15rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  border-radius: 1.25rem 1.25rem 0rem 0rem;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(7.5px);
+  transition-duration: 0.3s;
+}
+
+.category-bottom{
+  display: flex;
+  padding: 1.25rem 1.875rem 1.5625rem 1.875rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5625rem;
+  align-self: stretch;
+}
+
+.more-nft-section{
+  gap:3.75rem;
+}
+
+.nft-container{
+  display: flex;
+  height: 29.3125rem;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 1.25rem;
+  background: #3B3B3B;
+}
+
+.more-nft-row{
+  display: flex;
+  width: 65.625rem;
+  align-items: flex-start;
+  gap: 1.875rem;
+}
+
+.nft-top{
+  border-radius: 1.25rem 1.25rem 0rem 0rem;
+  height: 18.5rem;
+  align-self: stretch;
+}
+
+.nft-bottom{
+  padding: 1.25rem 1.875rem 1.5625rem 1.875rem;
+  align-items: flex-start;
+  gap: 1.5625rem;
+  align-self: stretch;
+}
+
+.nft-footer{
+  align-items: flex-start;
+  align-self: stretch;
+  justify-content: space-between;
+}
+
+.nft-footer-text1{
+  color: #858584;
+ font-family: "Space Mono";
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+}
+
+.nft-footer-text2{
+  color: #FFF;
+  text-align: right;
+  font-family: "Space Mono";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.mushroom-section{
+  width: 100%;
+  height: 43.75rem;
+  position: relative;
+}
+
+.mushroom{
+  width: 100%;
+  height: 41.25rem;
+  position: absolute;
+}
+
+.top-mushroom{
+  top: 0;
+  background: url('../content/Mushroom-top.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bottom-mushroom{
+  top: 2.5rem;
+  background: url('../content/Mushroom-bottom.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.info-row{
+  gap: 1.88rem;
+  align-items: stretch;
+
+}
+
+.info-card{
+  width: 20.625rem;
+  padding: 0.625rem 1.875rem 1.875rem 1.875rem;
+  align-items: center;
+  gap: 1.25rem;
+  border-radius: 1.25rem;
+  background: var(--Background---Secondary, #3B3B3B);
+}
+
+.info-title{
+  color: #FFF;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  text-transform: capitalize;
+  align-self: stretch;
+}
+
+.info-text{
+  color: #FFF;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  align-self: stretch;
+}
+
+.sub-widget{
+  border-radius: 1.25rem;
+  background: #3B3B3B;
+  width: 65.625rem;
+  padding: 3.75rem;
+  align-items: center;
+  gap: 5rem;
+}
+
+.sub-img-container{
+  height: 19.375rem;
+  flex: 1 0 0;
+  border-radius: 1.25rem;
+  background: url('../content/sub-widget.png'), lightgray 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sub-right{
+  width: 26.5625rem;
+  align-items: flex-start;
+  gap: 2.5rem;
+  flex-shrink: 0;
+}
+
+.sub-details{
+  align-items: flex-start;
+  gap: 0.625rem;
+  align-self: stretch;
+}
+
+.sub-title{
+  color: #FFF;
+  font-family: "Work Sans";
+  font-size: 2.375rem;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.sub-text{
+  color: #FFF;
+  font-family: "Work Sans";
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.sub-form{
+  height: 3.75rem;
+  padding: 1rem 0rem 1rem 1.25rem;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 1.25rem;
+  background:#FFF;
+  justify-content: space-between;
+}
+
+.sub-btn{
+  gap: 0.75rem;
+  padding: 0rem 3.125rem;
+}
+
+.sub-input{
+  border: none;
+  color: var(--Background, #2B2B2B);
+  font-family: "Work Sans";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.sub-input::placeholder{
+  color: var(--Background, #2B2B2B);
+  font-family: "Work Sans";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; 
+}
+
+.sub-input{
+  outline: none;
+}
+
+.nft-footer{
+  display: flex;
+width: 20.46338rem;
+padding-right: 5.25rem;
+flex-direction: column;
+align-items: flex-start;
+gap: 1.875rem;
+}
+
+.explore-footer{
+  display: flex;
+width: 15rem;
+flex-direction: column;
+align-items: flex-start;
+gap: 1.5625rem;
+}
+
+.weekly-digest-footer{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 1.5625rem;
+}
+
+.footer-text{
+  color: #CCC;
+
+font-family: "Work Sans";
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+}
+
+.copyright-container{
+  display: flex;
+width: 65.58838rem;
+flex-direction: column;
+align-items: flex-start;
+padding-top: 1.25rem;
+border-top: 0.0625rem solid #858584;;
 }
 
 /* Extra small devices (phones, 576px and down) */
